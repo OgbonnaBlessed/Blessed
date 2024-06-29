@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/Styles.css">
+    <link rel="stylesheet" href="lightbox.css">
+    <title>I'm Blessed</title>
+</head>
+<body>
+
+    <!-- header design -->
+    <header class="header">
+        <a href="#" class="logo"><span>I'm</span> Blessed</a>
+
+        <i class='bx bx-menu' id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- home section design -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello, It's Me</h3>
+            <h1>Ogbonna Blessed</h1>
+            <h3>And I'm a <span class="multiple-text"></span></h3>
+            <p>Specializing in Frontend Development, Web, and Graphic Design, I create captivating, user-centric digital experiences that elevate your brand and engage audiences.</p>
+            <div class="social-media">
+                <a href="https://www.facebook.com/profile.php?id=100073619336317&mibextid=ZbWKwL"><i class='bx bxl-facebook'></i></a>
+                <a href="https://x.com/ogbonna_bl97478?t=_tIjsFEbe7kx-TKYKpH8rA&s=09"><i class='bx bxl-twitter'></i></a>
+                <a href="https://www.instagram.com/blessedogbonna1?igsh=NGVhN2U2NjQ0Yg=="><i class='bx bxl-instagram-alt'></i></a>
+                <a href="https://www.linkedin.com/in/ogbonna-blessed-bb435b265?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/OgbonnaBlessed"><i class='bx bxl-github'></i></a>
+            </div>
+            <a href="images/I'm Blessed.pdf" download class="btn">Download CV</a>
+        </div>
+
+        <div class="home-img">
+            <img src="images/Home.png" alt="">
+        </div>
+    </section> 
+
+    <!-- About section design -->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="images/Home.png" alt="">
+        </div>
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Frontend Developer</h3>
+            <p>I specialize in Frontend Development, crafting dynamic websites and apps with HTML, CSS, and JavaScript for seamless user experiences.
+
+            <br><br>In addittion to my expertise in Frontend Development, I create captivating interfaces in Web Design, prioritizing usability and aesthetics.
+            
+            <br><br>Additionally, as a Graphic Designer, I design impactful visual identities and branding solutions that resonate diverse audiences.
+            <br><br>Driven by innovation and creativity, I bring expertise in Frontend Development, Web Design, and Graphic Design to exceed client expectations.
+            </p>
+            
+
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('Education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="Skills">
+                <ul>
+                    <li><span>Web Development</span><br>Websites and apps development.</li>
+                    <li><span>Web Design</span><br>Designing flawless and attractive web interfaces.</li>
+                    <li><span>Graphic Design</span><br>Crafting attractive graphics.</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="Experience">
+                <ul>
+                    <li><span>2022 - Current</span><br>Chief Executive officer for Ace Tech</li>
+                    <li><span>Feb 2024 - May 2024</span><br>Frontend Developer for Omega Vision</li>
+                    <li><span>Nov 2023 - Jan 2024</span><br>Internship at CWW Tech Africa</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="Education">
+                <ul>
+                    <li><span>2028</span><br>(Bsc ED) Computer science from LASU.</li>
+                    <li><span>2024</span><br>Certified Web Designer from Udemy.</li>
+                    <li><span>2023</span><br>Certified Web Developer from CWW Tech Africa.</li>
+                    <li><span>2020</span><br>SSCE from Lagos Baptist Secondary School.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services section design -->
+    <section class="services" id="services">
+        <h2 class="heading">My <span>Services</span></h2>
+
+        <div class="services-container">
+            <div class="services-box">
+                <i class='bx bx-code-alt'></i>
+                <h3>Frontend Development</h3>
+                <p>I create functional, user-friendly websites and web applications. I write codes, develop and test new applications, or monitor site performance and traffic. And as a Frontend Developer, I major on the User's end. <br><br>Thank you.</p>
+            </div>
+
+            <div class="services-box">
+                <i class='bx bx-intersect'></i>
+                <h3>Web Design</h3>
+                <p>I create the layout and design of websites and web pages, focusing on the visual aspects and usability of the site. Also I enjoy the art of conceptualization, design-thinking and I keep myself updated with my art. <br><br>Thank you.</p>
+            </div>
+
+            <div class="services-box">
+                <i class='bx bx-paint'></i>
+                <h3>Graphic Design</h3>
+                <p>I also help create compelling visual concepts that help convey your abstract ideas to your target audience. My versatility in the use of design softwares as InDesign, Illustrator and photoshop allows for excellence. <br><br>Thank you. </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio section design -->
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">Latest <span>Projects</span></h2>
+
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="btn" data-filter="all">All</button>
+                <button class="btn" data-filter=".Websites">Websites</button>
+                <button class="btn" data-filter=".Design">Web Design</button>
+                <button class="btn" data-filter=".Graphics">Graphics</button>
+            </div>
+        
+
+        <div class="portfolio-container">
+            <div class="portfolio-box mix Graphics">
+            <img src="images/portfolio/portfolio1.jpeg" alt=""> 
+                <div class="portfolio-layer">
+                    <h4>Graphic Design</h4>
+                    <p>This is a flier of a company that deals in cryptocurrency.</p>
+                    <div class="redirect">
+                        <a href="images/portfolio/portfolio1.jpeg" data-lightbox="models" data-title="Graphics" class="Graphics">
+                            <i class='bx bx-expand-alt'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-box mix Websites">
+                <img src="images/portfolio/Screenshot (3).png" alt="">
+                <div class="portfolio-layer">
+                    <h4>Website</h4>
+                    <p>This is a Web application, built for the downloading of audio messages.</p>
+                    <div class="redirect">
+                        <a href="images/portfolio/Screenshot (3).png" data-lightbox="models" data-title="Website" class="Websites">
+                            <i class='bx bx-expand-alt'></i>
+                        </a>
+                        <a href="https://ogbonnablessed.github.io/javascript-amazon-project-main/"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-box mix Websites">
+                <img src="images/portfolio/portfolio3.jpeg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Website</h4>
+                    <p>This is a Website of an insurance company.</p>
+                    <div class="redirect">
+                        <a href="images/portfolio/portfolio3.jpeg" data-lightbox="models" data-title="Website" class="Websites">
+                            <i class='bx bx-expand-alt'></i>
+                        </a>
+                        <a href="#">
+                            <i class='bx bx-link-external'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-box mix Design">
+                <img src="images/portfolio/portfolio4.jpeg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>This is a web page of a company that deals in all kinds of travels.</p>
+                    <div class="redirect">
+                        <a href="images/portfolio/portfolio4.jpeg" data-lightbox="models" data-title="Web Design" class="Design">
+                            <i class='bx bx-expand-alt'></i>
+                        </a>
+                        <a href="#">
+                            <i class='bx bx-link-external'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-box mix Design">
+                <img src="images/portfolio/portfolio5.jpeg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>This is a webpage of a company into Data analysis.</p>
+                    <div class="redirect">
+                        <a href="images/portfolio/portfolio5.jpeg" data-lightbox="models" data-title="Web Design" class="Design">
+                            <i class='bx bx-expand-alt'></i>
+                        </a>
+                        <a href="#">
+                            <i class='bx bx-link-external'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-box mix Graphics">
+                <img src="images/portfolio/portfolio6.jpeg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Graphic Design</h4>
+                    <p>This is a flier of a company that is into medical service.</p>
+                    <a href="images/portfolio/portfolio6.jpeg" data-lightbox="models" data-title="Graphics" class="Graphics">
+                        <i class='bx bx-expand-alt'></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Contact section design -->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+
+        <form action="#">
+            <div class="input-box">
+                <div class="input-field field">
+                    <input type="text" placeholder="Full Name" id="name" class="item" autocomplete="off">
+                    <div class="error-txt">Full name can't be blank</div>
+                </div>
+                <div class="input-field field">
+                    <input type="email" placeholder="Email Address" id="email" class="item" autocomplete="off">
+                    <div class="error-txt email">Email Address can't be blank</div>
+                </div>
+            </div>
+            <div class="input-box">
+                <div class="input-field field">
+                    <input type="text" placeholder="Phone Number" id="phone" class="item" autocomplete="off">
+                    <div class="error-txt">Phone number can't be blank</div>
+                </div>
+                <div class="input-field field">
+                    <input type="text" placeholder="Email Subject" id="subject" class="item" autocomplete="off">
+                    <div class="error-txt">Subject can't be blank</div>
+                </div>
+            </div>
+            <div class="textarea-field field">
+                <textarea name="" id="message" cols="30" rows="10" placeholder="Your Message" class="item" autocomplete="off"></textarea>
+                <div class="error-txt">Message can't be blank</div>
+            </div>
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+    </section>
+
+    <!-- Footer design -->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2024 by Blessed | All Rights Reserved.</p>
+        </div>
+
+        <div class="footer-iconTop">
+            <a href="#home"><i class='bx bxs-chevrons-up'></i></a>
+        </div>
+    </footer>
+
+    <!-- scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- typed js -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- mix it up -->
+    <script src="mixitup.min.js"></script>
+
+    <!-- send message to email -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="lightbox-plus-jquery.js"></script>
+
+    <!-- Custom js -->
+    <script src="Js/Script.js"></script>
+</body>
+</html>
