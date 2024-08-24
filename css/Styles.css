@@ -539,8 +539,12 @@ form .textarea-field .error-txt {
 }
 
 /* Basic styles for modal and buttons */
-.modal {
-    display: none; /* Hidden by default */
+#portfolioModal {
+    display: none;
+}
+
+ .modal {
+    display: none;
     position: fixed; 
     top: 0; 
     left: 0;
@@ -621,7 +625,7 @@ form .textarea-field .error-txt {
 
 .portfolio-box.active {
     display: block; /* Show active items */
-}
+} 
 
 @media (max-width: 1200px) {
     html {
