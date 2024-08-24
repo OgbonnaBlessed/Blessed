@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -14,6 +16,17 @@
     --second-bg-color: #131313;
     --text-color: #fff;
     --main-color: #ff004f;
+}
+
+::-webkit-scrollbar {
+    background: transparent;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    border-radius: 10px;
+    cursor: grabbing;
 }
 
 html {
@@ -43,6 +56,7 @@ section {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    box-shadow: 0 0 1rem var(--main-color);
 }
 
 .header a span {
@@ -60,11 +74,19 @@ section {
     cursor: default;
 }
 
+.dot {
+    display: none;
+}
+
 .navbar a {
     font-size: 1.7rem;
     color: var(--text-color);
     margin-left: 4rem;
     transition: .3s;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .navbar a:hover,
@@ -137,7 +159,11 @@ span {
 }
 
 .home-content p {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .social-media a {
@@ -218,11 +244,20 @@ span {
 .tab-contents ul li {
     list-style: none;
     margin: 20px 0;
-    font-size: 14px;
+    font-size: 1.5rem;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .tab-contents ul li span {
     color: #b54769;
+    font-size: 1.8rem;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: oblique;
 }
 
 .tab-contents {
@@ -245,15 +280,26 @@ span {
 .about-content h2 {
     text-align: left;
     line-height: 1.2;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
 }
 
 .about-content h3 {
-    font-size: 2.6rem;
+    font-size: 3rem;
     margin-bottom: .8rem;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
 }
 
 .about-content p {
     font-size: 1.6rem;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .services h2 {
@@ -289,12 +335,20 @@ span {
 }
 
 .services-box h3 {
-    font-size: 2.6rem;
+    font-size: 2.8rem;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
 }
 
 .services-box p {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     margin: 1rem 0 3rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .portfolio {
@@ -327,11 +381,12 @@ span {
     box-shadow: 0 0 1rem var(--bg-color);
     overflow: hidden;
     display: flex;
-    max-height: 20rem;
+    height: 20rem;
 }
 
 .portfolio-box img {
     width: 100%;
+    height: 100%;
     transition: .5s ease;
 }
 
@@ -483,6 +538,91 @@ form .textarea-field .error-txt {
     color: var(--second-bg-color);
 }
 
+/* Basic styles for modal and buttons */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.modal-content {
+    position: relative;
+    background: var(--second-bg-color);
+    width: 100%;
+    max-width: 800px;
+    max-height: 50rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.modal-image {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.modal-image img {
+    width: 100%;
+    max-height: 35rem;
+    border-radius: 10px;
+}
+
+#modalDesc {
+    font-size: 1.5rem;
+}
+
+.modal-description {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    align-items: left;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.modal-nav {
+    display: none; /* Start hidden */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: #000;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Portfolio item styles */
+.portfolio-box {
+    display: block; /* Show all items by default */
+}
+
+.portfolio-box.active {
+    display: block; /* Show active items */
+}
+
 @media (max-width: 1200px) {
     html {
         font-size: 55%;
@@ -517,6 +657,17 @@ form .textarea-field .error-txt {
         margin-left: 3rem;
     }
 
+    .dot {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 10px 0;
+    }
+
     .navbar {
         position: absolute;
         width: 100%;
@@ -524,9 +675,11 @@ form .textarea-field .error-txt {
         top: 100%;
         padding: 1rem 3%;
         background: var(--bg-color);
-        border-top: .1rem solid rgba(0,0,0, .2);
-        box-shadow: 0 .5rem 1rem rgba(0,0,0, .2);
+        box-shadow: 0 1px 3px var(--main-color);
         display: none;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        transition: .5s ease;
     }
 
     .navbar.active {
@@ -598,6 +751,15 @@ form .textarea-field .error-txt {
 
     .contact form .input-box input {
         width: 100%;
+    }
+
+    .modal-description {
+        font-size: 1.2rem;
+        padding: 7px 1px;
+    }
+
+    #modalDesc {
+        font-size: 1.1rem;
     }
 }
 

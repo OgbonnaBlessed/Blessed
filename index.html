@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="css/Styles.css">
-    <link rel="stylesheet" href="lightbox.css">
+    <!-- <link rel="stylesheet" href="lightbox.css"> -->
     <title>I'm Blessed</title>
 </head>
 <body>
@@ -22,6 +22,11 @@
             <a href="#services">Services</a>
             <a href="#portfolio">Portfolio</a>
             <a href="#contact">Contact</a>
+            <div class="dot">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+                    <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
+                  </svg>
+            </div>
         </nav>
     </header>
 
@@ -188,63 +193,64 @@
         <div class="container">
             <div class="filter-buttons">
                 <button class="btn" data-filter="all">All</button>
-                <button class="btn" data-filter=".Websites">Websites</button>
-                <button class="btn" data-filter=".Design">Web Design</button>
-                <button class="btn" data-filter=".Graphics">Graphics</button>
+                <button class="btn" data-filter="Websites">Websites</button>
+                <button class="btn" data-filter="Design">Web Design</button>
+                <button class="btn" data-filter="Graphics">Graphics</button>
             </div>
-        
 
         <div class="portfolio-container">
-            <div class="portfolio-box mix Graphics">
-            <img src="images/portfolio/portfolio1.jpeg" alt=""> 
+            <div class="portfolio-box Graphics"  data-category="Graphics">
+            <img src="images/portfolio/portfolio4.png" alt=""> 
                 <div class="portfolio-layer">
                     <h4>Graphic Design</h4>
                     <p>This is a flier of a company that deals in cryptocurrency.</p>
                     <div class="redirect">
-                        <a href="images/portfolio/portfolio1.jpeg" data-lightbox="models" data-title="Graphics" class="Graphics">
+                        <a href="#" class="open-modal"  data-index="0">
                             <i class='bx bx-expand-alt'></i>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <div class="portfolio-box mix Websites">
-                <img src="images/portfolio/Screenshot (3).png" alt="">
+            <div class="portfolio-box Websites" data-category="Websites">
+                <img src="images/portfolio/Book-Field.jpeg" alt="">
                 <div class="portfolio-layer">
                     <h4>Website</h4>
-                    <p>This is a complex ecommerce web application.</p>
+                    <p>This is a complex ecommerce web application, that allows for book purchasing.</p>
                     <div class="redirect">
-                        <a href="images/portfolio/Screenshot (3).png" data-lightbox="models" data-title="Website" class="Websites">
+                        <a href="#" class="open-modal" data-index="1">
                             <i class='bx bx-expand-alt'></i>
                         </a>
-                        <a href="https://ogbonnablessed.github.io/javascript-amazon-project-main/"><i class='bx bx-link-external'></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="portfolio-box mix Websites">
-                <img src="images/portfolio/portfolio3.jpeg" alt="">
-                <div class="portfolio-layer">
-                    <h4>Website</h4>
-                    <p>This is a Website for a company that deals in data analysis.</p>
-                    <div class="redirect">
-                        <a href="images/portfolio/portfolio3.jpeg" data-lightbox="models" data-title="Website" class="Websites">
-                            <i class='bx bx-expand-alt'></i>
-                        </a>
-                        <a href="#">
+                        <a href="https://ogbonnablessed.github.io/books/">
                             <i class='bx bx-link-external'></i>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <div class="portfolio-box mix Design">
+            <div class="portfolio-box Websites" data-category="Websites">
+                <img src="images/portfolio/Book-flight.jpeg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Website</h4>
+                    <p>This is a Website for a company that allows for the booking of flights and hotels.</p>
+                    <div class="redirect">
+                        <a href="#" class="open-modal" data-index="2">
+                            <i class='bx bx-expand-alt'></i>
+                        </a>
+                        <a href="https://ogbonnablessed.github.io/flight-app/">
+                            <i class='bx bx-link-external'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-box Design" data-category="Design">
                 <img src="images/portfolio/portfolio4.png" alt="">
                 <div class="portfolio-layer">
                     <h4>Web Design</h4>
                     <p>This is a website for Omega Vision Christian Network.</p>
                     <div class="redirect">
-                        <a href="images/portfolio/portfolio4.png" data-lightbox="models" data-title="Web Design" class="Design">
+                        <a href="#" class="open-modal" data-index="3">
                             <i class='bx bx-expand-alt'></i>
                         </a>
                         <a href="https://ogbonnablessed.github.io/Omega-Vision-Christian-Network/">
@@ -254,35 +260,52 @@
                 </div>
             </div>
 
-            <div class="portfolio-box mix Design">
-                <img src="images/portfolio/portfolio5.jpeg" alt="">
+            <div class="portfolio-box Design" data-category="Design">
+                <img src="images/portfolio/Budget-tracker.jpeg" alt="">
                 <div class="portfolio-layer">
                     <h4>Web Design</h4>
-                    <p>This is a webpage of a company into Data analysis.</p>
+                    <p>This is a website that allows you to calculate your expenses.</p>
                     <div class="redirect">
-                        <a href="images/portfolio/portfolio5.jpeg" data-lightbox="models" data-title="Web Design" class="Design">
+                        <a href="#" class="open-modal" data-index="4">
                             <i class='bx bx-expand-alt'></i>
                         </a>
-                        <a href="#">
+                        <a href="https://ogbonnablessed.github.io/Budget-Expense-Tracker/">
                             <i class='bx bx-link-external'></i>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <div class="portfolio-box mix Graphics">
-                <img src="images/portfolio/portfolio6.jpeg" alt="">
+            <div class="portfolio-box Graphics" data-category="Graphics">
+                <img src="images/portfolio/Book-Field.jpeg" alt="">
                 <div class="portfolio-layer">
                     <h4>Graphic Design</h4>
                     <p>This is a flier of a company that offers scholarships to study data analysis.</p>
-                    <a href="images/portfolio/portfolio6.jpeg" data-lightbox="models" data-title="Graphics" class="Graphics">
-                        <i class='bx bx-expand-alt'></i>
-                    </a>
+                    <div class="redirect">
+                        <a href="#" class="open-modal" data-index="5">
+                            <i class='bx bx-expand-alt'></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
+        </div> 
         </div>
     </section>
+
+    <!-- Modal Structure -->
+    <div id="portfolioModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-image">
+                <img id="modalImg" src="" alt="">
+                <button id="prevModal" class="modal-nav prev"><i class="bx bx-left-arrow-alt"></i></button>
+                <button id="nextModal" class="modal-nav next"><i class="bx bx-right-arrow-alt"></i></button>
+            </div>
+            <div class="modal-description">
+                <h2 id="modalTitle"></h2>
+                <p id="modalDesc"></p>
+            </div>
+        </div>
+    </div>
 
     <!-- Contact section design -->
     <section class="contact" id="contact">
@@ -335,14 +358,12 @@
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
     <!-- mix it up -->
-    <script src="mixitup.min.js"></script>
+    <!-- <script src="mixitup.min.js"></script> -->
 
     <!-- send message to email -->
     <script src="https://smtpjs.com/v3/smtp.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-    <script src="lightbox-plus-jquery.js"></script>
 
     <!-- Custom js -->
     <script src="Js/Script.js"></script>

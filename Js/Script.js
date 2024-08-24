@@ -57,9 +57,6 @@ const typed = new Typed('.multiple-text', {
     loop: true
 });
 
-/*=========================== mix it up portfolio section ========================== */
-var mixer = mixitup('.portfolio-container');
-
 /*=========================== about tab-content section ========================== */
 var tablinks = document.getElementsByClassName("tab-links");
 var tabcontents = document.getElementsByClassName("tab-contents");
@@ -168,3 +165,107 @@ form.addEventListener("submit", (e) => {
         return false;
     }
 })
+
+/********************************************************** Modal Functionality **********************************************/
+
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-buttons .btn');
+    const portfolioBoxes = Array.from(document.querySelectorAll('.portfolio-box'));
+    const modal = document.getElementById('portfolioModal');
+    const modalImg = document.getElementById('modalImg');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDesc = document.getElementById('modalDesc');
+    const prevModalBtn = document.getElementById('prevModal');
+    const nextModalBtn = document.getElementById('nextModal');
+    
+    let currentFilter = 'all';
+    let currentIndex = -1;
+    let filteredItems = [];
+
+    // Filter Portfolio Items
+    function filterItems(category) {
+        currentFilter = category;
+        filteredItems = portfolioBoxes.filter(item => {
+            return category === 'all' || item.classList.contains(category);
+        });
+        displayFilteredItems();
+    }
+
+    // Display Filtered Items
+    function displayFilteredItems() {
+        portfolioBoxes.forEach(box => box.style.display = 'none');
+        filteredItems.forEach((item, index) => {
+            item.style.display = 'block';
+            item.dataset.index = index; // Update index for modal navigation
+        });
+    }
+
+    // Open Modal
+    function openModal(index) {
+        currentIndex = index;
+        const currentItem = filteredItems[currentIndex];
+        const imgSrc = currentItem.querySelector('img').src;
+        const title = currentItem.querySelector('h4').innerText;
+        const desc = currentItem.querySelector('p').innerText;
+
+        modalImg.src = imgSrc;
+        modalTitle.innerText = title;
+        modalDesc.innerText = desc;
+        modal.style.display = 'flex';
+
+        updateModalNavigation();
+    }
+
+    // Update Modal Navigation
+    function updateModalNavigation() {
+        prevModalBtn.style.display = currentIndex === 0 ? 'none' : 'block';
+        nextModalBtn.style.display = currentIndex === filteredItems.length - 1 ? 'none' : 'block';
+    }
+
+    // Close Modal
+    function closeModal() {
+        modal.style.display = 'none';
+    }
+
+    // Modal Navigation
+    prevModalBtn.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            openModal(currentIndex);
+        }
+    });
+
+    nextModalBtn.addEventListener('click', () => {
+        if (currentIndex < filteredItems.length - 1) {
+            currentIndex++;
+            openModal(currentIndex);
+        }
+    });
+
+    // Event Listeners for Filter Buttons
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const category = button.getAttribute('data-filter');
+            filterItems(category);
+        });
+    });
+
+    // Event Listeners for Opening Modal
+    document.querySelectorAll('.open-modal').forEach((element) => {
+        element.addEventListener('click', (e) => {
+            e.preventDefault();
+            const index = parseInt(element.dataset.index, 10);
+            openModal(index);
+        });
+    });
+
+    // Close Modal on Outside Click
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            closeModal();
+        }
+    });
+
+    // Initial Load
+    filterItems('all');
+});
